@@ -8,28 +8,28 @@
 // from the command palette or from `Zed` application menu.
 {
   "edit_predictions": {
-    "mode": "eager",
-    "copilot": {
-      "proxy": null,
-      "proxy_no_verify": null
-    },
+    "mode": "subtle",
     "enabled_in_text_threads": false
+    // "copilot": {
+    //   "proxy": "http://localhost:11434",
+    //   "proxy_no_verify": false
+    // }
   },
   "agent": {
     "inline_assistant_model": {
-      "provider": "google",
-      "model": "gemini-1.5-flash"
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-latest"
     },
     "always_allow_tool_actions": true,
     "default_profile": "write",
     "default_model": {
-      "provider": "google",
-      "model": "gemini-2.0-flash"
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-latest"
     },
     "version": "2"
   },
   "features": {
-    "edit_prediction_provider": "supermaven"
+    "edit_prediction_provider": "copilot"
   },
   "base_keymap": "VSCode",
   "vim_mode": true,
@@ -40,7 +40,10 @@
   "theme": "Quill",
   "terminal": {
     "dock": "right",
-    "default_width": 400
+    "default_width": 400,
+    "copy_on_select": true,
+    "option_as_meta": true,
+    "button": true
   },
   "languages": {
     "JSON": {
